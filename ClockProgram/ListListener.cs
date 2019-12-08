@@ -10,6 +10,10 @@ namespace ClockProgram
         {
             theList.ListChange += new List.ListChangeHandler(ListHasChanged);
         }
+        public void Unsubscribe(List theList) 
+        {
+            theList.ListChange -= new List.ListChangeHandler(ListHasChanged);
+        }
         public void ListHasChanged(object theList, TimeInfoEventArgs ti) 
         {
             int h;

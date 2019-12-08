@@ -60,6 +60,7 @@ namespace ClockProgram
             {
                 ArrayList changes = new ArrayList();
                 changes.Add(base[index]);
+                changes.Add(value);
                 System.DateTime dt = System.DateTime.Now;
                 TimeInfoEventArgs timeInformation = new TimeInfoEventArgs(dt, changes);
                 OnListChange(timeInformation);
